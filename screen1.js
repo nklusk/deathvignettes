@@ -29,6 +29,8 @@ leaves.collider = "static";
 
 function draw() {
     clear();
+
+    
     background(screenOneBackground);
     // sword.x = 650;
     // sword.y = 410;
@@ -43,9 +45,8 @@ function draw() {
     }
 
     if (dist(sword.x,sword.y,handPosition.x,handPosition.y) < 20) {
-        console.log("in hand")
-        sword.x = 650;
-        sword.y = 410;
+        sword.position = createVector(502, 315);
+        sword.collider = "static";
     }
 
 }
