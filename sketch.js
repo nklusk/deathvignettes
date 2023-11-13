@@ -1,7 +1,4 @@
-// a simple game where you click to drop a ball and 
-// try to get as many balls as possible on the spinning shape
-// move the mouse up and down to change the rotation speed of the shape
-// use the right and left keys to make the shape larger or smaller
+
 
 // let spinningShape;
 // let highScore = 0;
@@ -65,6 +62,7 @@
 
 
 let screenZeroBackground;
+let deathSpiral;
 
 function preload () {
     screenZeroBackground = loadImage("assets/screenZeroBackground.png");
@@ -72,6 +70,21 @@ function preload () {
 
 function setup () {
     createCanvas(800, 600);
-    background(31,63,48);
-    image(screenZeroBackground, 0, 0);
+    
+    //image(screenZeroBackground, 0, 0);
+
+    deathSpiral = new Sprite ();
+    deathSpiral.img = 'assets/deathSpiral.png'
+    // deathSpiral.width = 100;
+    // deathSpiral.height = 100;
+}
+
+function draw() {
+    clear();
+    background(screenZeroBackground);
+    deathSpiral.scale = .16;
+    deathSpiral.rotationSpeed = 1;
+    deathSpiral.y = 520;
+    deathSpiral.x = 410;
+  
 }
