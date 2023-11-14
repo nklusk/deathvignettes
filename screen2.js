@@ -18,7 +18,7 @@ function preload() {
 function setup() {
     createCanvas(800, 600);
     
-    world.gravity.y = 100;
+   
 
     phaseFlower = new Sprite ();
     phaseFlower.img = 'assets/flowerTwo.png'
@@ -67,7 +67,6 @@ function draw(){
     
     phaseFlower.x = 220
     phaseFlower.y = 190
-    // phaseFlower.rotation = -72
     flowerAngle = phaseFlower.rotation;
         console.log(flowerAngle);
 
