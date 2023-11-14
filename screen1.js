@@ -53,6 +53,7 @@ function draw() {
     phaseFlower.x = 220
     phaseFlower.y = 190
 
+
     if (sword.mouse.dragging()) {
         sword.moveTowards(mouseX, mouseY, .1);
         sword.collider = "kinematic";
@@ -69,8 +70,9 @@ function draw() {
         // }
     
         phaseFlower.rotateTo(-72, .2);
-        console.log(phaseFlower.rotation)
         flowerAngle = phaseFlower.rotation
+        console.log(flowerAngle);
+        
         if (flowerAngle == -72){
             location.assign("screen2.html");
         }
